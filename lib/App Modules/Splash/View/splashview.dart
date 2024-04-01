@@ -23,10 +23,13 @@ class SplashView extends StatelessWidget {
                 fit: BoxFit.cover,
               )),
           Container(
-            height: 100,
-            width: 330,
-            alignment: Alignment.center,
-            color: Colors.black.withOpacity(.3),
+            decoration: BoxDecoration( 
+              borderRadius: const BorderRadius.all(Radius.circular(50)),
+            color: Colors.black.withOpacity(.4),),
+          alignment: Alignment.center,
+          height: 100,
+          width: 400,
+
           ),
           Container(
             decoration: BoxDecoration(
