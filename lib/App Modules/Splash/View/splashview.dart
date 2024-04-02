@@ -1,12 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_first_app/App%20Modules/Auth/View/login_screen.dart';
 import 'package:flutter_first_app/Utils/images.dart';
 
 import 'package:flutter_first_app/Utils/customtext.dart';
 
-class SplashView extends StatelessWidget {
+class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
   @override
+  State<SplashView> createState() => _SplashViewState();
+}
+
+class _SplashViewState extends State<SplashView> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const Login()));
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
         body: SizedBox(
@@ -23,13 +37,13 @@ class SplashView extends StatelessWidget {
                 fit: BoxFit.cover,
               )),
           Container(
-            decoration: BoxDecoration( 
+            decoration: BoxDecoration(
               borderRadius: const BorderRadius.all(Radius.circular(50)),
-            color: Colors.black.withOpacity(.4),),
-          alignment: Alignment.center,
-          height: 100,
-          width: 400,
-
+              color: Colors.black.withOpacity(.4),
+            ),
+            alignment: Alignment.center,
+            height: 100,
+            width: 400,
           ),
           Container(
             decoration: BoxDecoration(
@@ -45,6 +59,7 @@ class SplashView extends StatelessWidget {
             ),
             child: CustomText(
               title: "Denise Perfumes",
+              fontFamily: "Lora",
               color: Color.fromARGB(200, 231, 155, 49).withOpacity(1),
               fontSize: 35,
               fontWeight: FontWeight.w600,
