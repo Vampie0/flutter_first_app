@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+// Screens
 import 'package:flutter_first_app/App%20Modules/Auth/View/login_screen.dart';
+// Utils
 import 'package:flutter_first_app/Utils/images.dart';
-
 import 'package:flutter_first_app/Utils/customtext.dart';
 
 class SplashView extends StatefulWidget {
@@ -17,7 +18,7 @@ class _SplashViewState extends State<SplashView> {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const Login()));
+          context, MaterialPageRoute(builder: (context) => const LoginScreen()));
     });
   }
 
