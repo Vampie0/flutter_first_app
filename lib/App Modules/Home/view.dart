@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 // Utils
 import 'package:flutter_first_app/Utils/customtext.dart';
+import 'package:flutter_first_app/Utils/images.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -10,11 +10,14 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 2,
+        
         title: const CustomText(
+          
           title: "Home",
           fontSize: 20,
           fontWeight: FontWeight.w600,
-          color: Colors.red,
+          color: Color.fromARGB(255, 45, 167, 188),
         ),
       ),
       body: SizedBox.expand(
@@ -42,57 +45,14 @@ class HomeView extends StatelessWidget {
                   Container(
                     height: 80,
                     width: 140,
+                    child: Image.asset(Images.logout),
                     margin: const EdgeInsets.only(right: 15),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.amber,
                     ),
                   ),
-                  Container(
-                    height: 80,
-                    width: 140,
-                    margin: const EdgeInsets.only(right: 15),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.pink,
-                    ),
-                  ),
-                  Container(
-                    height: 80,
-                    width: 140,
-                    margin: const EdgeInsets.only(right: 15),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.green,
-                    ),
-                  ),
-                  Container(
-                    height: 80,
-                    width: 140,
-                    margin: const EdgeInsets.only(right: 15),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.purple,
-                    ),
-                  ),
-                  Container(
-                    height: 80,
-                    width: 140,
-                    margin: const EdgeInsets.only(right: 15),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.orange,
-                    ),
-                  ),
-                  Container(
-                    height: 80,
-                    width: 140,
-                    margin: const EdgeInsets.only(right: 15),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.blue,
-                    ),
-                  ),
+                
                 ],
               ),
             ),

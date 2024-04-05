@@ -47,10 +47,6 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-
-// <--------------------------------- Login LOGO ----------------------------------->
-
-
               const Align(
                 alignment: Alignment.center,
                 child: CustomText(
@@ -81,7 +77,6 @@ class LoginScreen extends StatelessWidget {
               ),
 
               const SizedBox(height: 10),
-
               TextFormField(
                 style: const TextStyle(
                   color: Colors.white,
@@ -92,7 +87,7 @@ class LoginScreen extends StatelessWidget {
                 decoration: InputDecoration(
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                  focusedBorder: OutlineInputBorder(
+                  focusedBorder:  OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(40)),
                     borderSide: BorderSide(
                       color: Color.fromARGB(200, 231, 155, 49).withOpacity(1),
@@ -137,14 +132,13 @@ class LoginScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
                 keyboardType: TextInputType.emailAddress,
-                obscureText: true,
                 decoration: InputDecoration(
                   contentPadding:
                       const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                  focusedBorder: OutlineInputBorder(
+                  focusedBorder:  OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(40)),
                     borderSide: BorderSide(
-                      color: Color.fromARGB(200, 231, 155, 49).withOpacity(1),
+                     color: Color.fromARGB(200, 231, 155, 49).withOpacity(1),
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
@@ -186,11 +180,12 @@ class LoginScreen extends StatelessWidget {
                   );
                 },
                 child: Container(
+                
                   height: 50,
                   width: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(40),
-                    color: Color.fromARGB(255, 227, 196, 104).withOpacity(.4),
+                    color: Color.fromARGB(255, 227, 196, 104),
                     border: Border.all(
                       width: 2,
                       color: Color.fromARGB(255, 220, 220, 28),
@@ -199,7 +194,7 @@ class LoginScreen extends StatelessWidget {
                   child: const Center(
                     child: CustomText(
                       title: "Login",
-                      color: Color.fromARGB(255, 84, 9, 9),
+                      color: Colors.red,
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                       fontFamily: "Lora",
